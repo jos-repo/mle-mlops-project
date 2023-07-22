@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  model-service:
+        build:
+            context: webservice
+            dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+
+  prometheus:
+      image: prom/prometheus:v2.21.0
+      ports:
+          - 9090:9090
+      volumes:
+          - ./prometheus:/etc/prometheus
+          - prometheus-data:/prometheus
+      command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
+
+  grafana:
+      image: grafana/grafana
+      ports:
+          - 3000:3000
+      restart: unless-stopped
+      volumes:
+          - ./grafana:/etc/grafana/
+          - grafana-data:/var/lib/grafana
+
+  evidently_service:
+    build:
+      context: evidently_service
+      dockerfile: Dockerfile
+    depends_on:
+      - grafana
+    ports:
+      - "8085:8085"
+
+volumes:
+    grafana-data:
+    prometheus-data:

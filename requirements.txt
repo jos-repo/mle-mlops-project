@@ -1,0 +1,13 @@
+pyarrow
+dvc
+dvc-gs
+pydantic
+fastapi
+mlflow
+uvicorn
+jupyter
+python-dotenv
+google-cloud-storage
+prometheus-fastapi-instrumentator==5.7.1
+pandas>=1.1.5
+requests>=2.27.1

@@ -5,3 +5,16 @@ Please do not fork this repository, but use this repository as a template for yo
 
 ## Project for today
 The task for today you can find in the [project-description.md](project-description.md) file.
+
+
+## Setup
+
+### Environment
+
+```bash
+pyenv local 3.11.3
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -r requirements.txt
+```
