@@ -16,7 +16,7 @@ def index():
 
 @app.post("/predict", response_model=TaxiRidePrediction)
 def predict_duration(data: TaxiRide):
-    prediction = predict("green-taxi-ride-duration", data)
+    prediction = predict("green-taxi-trip-duration-linear", data)
     try:
         response = requests.post(
             f"http://evidently_service:8085/iterate/green_taxi_data",
