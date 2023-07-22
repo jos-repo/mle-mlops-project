@@ -159,4 +159,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-bootcampmleneuefische-476028fdab84.json
+/webservice/bootcampmleneuefische-476028fdab84.json
+/send_data.py
+/evidently_service/green_taxi_data/reference.csv

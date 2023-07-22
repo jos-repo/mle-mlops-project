@@ -106,7 +106,7 @@ curl -X 'POST' \
 If you get a correct response you can download two datasets with:
 
 ```bash
-wget -P ./data https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2021-01.parquet
+wget -P ./data https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2022-02.parquet
 ```
 
 And run the `send_data.py` file. To send more data to the API. You can now check in the `grafana` dashboard if a data drift is detected or if you have no data drift. You can also try to change the `window_size` in the `config.yaml` file to see how it affects the data drift detection. Of course you need to rebuild your services with:
