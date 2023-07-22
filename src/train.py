@@ -28,7 +28,7 @@ os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_APPLICATION_CREDENTIALS
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 client = MlflowClient(tracking_uri=MLFLOW_TRACKING_URI)
 # Setup the MLflow experiment
-mlflow.set_experiment("green-taxi-trip-duration-xgb")
+mlflow.set_experiment("green-taxi-trip-duration-linear")
 
 # Set variables
 year = 2021
